@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="blog by drp|ू·ω·` )">
+  <meta name="description" content="git 传送门：菜鸟教程  git安装Debain/Ubuntu12345$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \$ apt-get install git$ git --version Centos/RedHat12345$ yum install curl-devel expat-devel gettext-de">
 <meta name="keywords" content="drp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git使用">
 <meta property="og:url" content="http://yoursite.com/blog/2019/04/13/git使用/index.html">
 <meta property="og:site_name" content="Drp的学习笔记">
-<meta property="og:description" content="blog by drp|ू·ω·` )">
+<meta property="og:description" content="git 传送门：菜鸟教程  git安装Debain/Ubuntu12345$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \$ apt-get install git$ git --version Centos/RedHat12345$ yum install curl-devel expat-devel gettext-de">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-12T10:30:34.441Z">
+<meta property="og:updated_time" content="2019-04-12T12:34:39.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用">
-<meta name="twitter:description" content="blog by drp|ू·ω·` )">
+<meta name="twitter:description" content="git 传送门：菜鸟教程  git安装Debain/Ubuntu12345$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \$ apt-get install git$ git --version Centos/RedHat12345$ yum install curl-devel expat-devel gettext-de">
 
 
 
@@ -369,7 +369,7 @@
                 
               
 
-              <time title="Created: 2019-04-12 18:30:34 / Modified: 10:30:34" itemprop="dateCreated datePublished" datetime="2019-04-12T18:30:34Z">2019-04-12</time>
+              <time title="Created: 2019-04-12 18:30:34 / Modified: 12:34:39" itemprop="dateCreated datePublished" datetime="2019-04-12T18:30:34Z">2019-04-12</time>
             
 
             
@@ -415,7 +415,52 @@
       
 
       
-        
+        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><blockquote>
+<p>传送门：<a href="http://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+</blockquote>
+<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><p><strong>Debain/Ubuntu</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> apt-get install git</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> git --version</span><br></pre></td></tr></table></figure></p>
+<p><strong>Centos/RedHat</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> yum install curl-devel expat-devel gettext-devel \</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> yum -y install git-core</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> git --version</span><br></pre></td></tr></table></figure></p>
+<p><strong>源码安装</strong></p>
+<p>具体流程：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">git --version    ## 查看自带的版本</span><br><span class="line"></span><br><span class="line">yum remove git   ## 移除原来的版本</span><br><span class="line"></span><br><span class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br><span class="line"></span><br><span class="line">yum install gcc-c++ perl-ExtUtils-MakeMaker</span><br><span class="line"></span><br><span class="line">cd /usr/src</span><br><span class="line"></span><br><span class="line">wget https://www.kernel.org/pub/software/scm/git/git-2.7.3.tar.gz</span><br><span class="line"></span><br><span class="line">tar xf git-2.7.3.tar.gz</span><br><span class="line"></span><br><span class="line">cd git-2.7.3</span><br><span class="line"></span><br><span class="line">make configure</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/git ##配置目录</span><br><span class="line"></span><br><span class="line">make profix=/usr/git</span><br><span class="line"></span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">echo "export PATH=$PATH:/usr/git/bin" &gt;&gt; /etc/profile</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">git --version</span><br></pre></td></tr></table></figure></p>
+<h4 id="Windows-平台安装"><a href="#Windows-平台安装" class="headerlink" title="Windows 平台安装"></a>Windows 平台安装</h4><blockquote>
+<p>传送门：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">git安装包下载</a></p>
+</blockquote>
+<h4 id="MAC-平台安装"><a href="#MAC-平台安装" class="headerlink" title="MAC 平台安装"></a>MAC 平台安装</h4><blockquote>
+<p>传送门：<a href="http://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">git安装包下载</a></p>
+</blockquote>
+<hr>
+<h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><p>Git 提供了一个叫做<strong> git config </strong>的工具，专门用来配置或读取相应的工作环境变量。</p>
+<ul>
+<li>要检查已有的配置信息，可以使用<strong> git config –list</strong></li>
+</ul>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p>要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add [shortname] [url]</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><a href="https://github.com/" target="_blank" rel="noopener">注册github</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://desktop.github.com/" target="_blank" rel="noopener">下载github Desktop</a></p>
+</blockquote>
+<blockquote>
+<p>需要有github账号，并且你所在的机器生成<strong>sshkey</strong>放到github上，你还需要有<strong>git</strong>的客户端，注意不是github的客户端</p>
+</blockquote>
+<p><strong>获取key</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh-keygen -t rsa -C "youremail@example.com"</span><br></pre></td></tr></table></figure></p>
+<p><strong>settings -&gt; SSH and GPG keys -&gt; New SSH key</strong><br>(设置标题，可以随便填，粘贴在你电脑上生成的 key)</p>
+<p>验证是否成功：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>备注(好习惯)<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "备注"</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><p>1.初始仓库，会生成<strong>.git</strong>隐藏文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
+<p>2.连接远程仓库,（**）表示repository(仓库名)<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add aname git@github.com:/∗∗.git</span><br></pre></td></tr></table></figure></p>
+<p>3.把主分支拉过来<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull aname master</span><br></pre></td></tr></table></figure></p>
+<p>4.此时由于repository里面只有一个readme所以没冲突，这一步为空</p>
+<p>5.把文件夹下的所有的文件加载到缓冲区，有的说是index<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></p>
+<p>6.提交的备注,比如为啥提交啊，你改了哪里啊等等<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m “message</span><br></pre></td></tr></table></figure></p>
+<p>7.把分支推到服务器<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push aname master</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参照：<a href="https://blog.csdn.net/u014449046/article/details/51087966" target="_blank" rel="noopener">如何把自己的项目push到github上</a></p>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>恢复到为提交的状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -497,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -583,6 +637,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装"><span class="nav-number">1.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-平台安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">Windows 平台安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MAC-平台安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">MAC 平台安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git配置"><span class="nav-number">1.2.</span> <span class="nav-text">git配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">2.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">2.1.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令"><span class="nav-number">2.2.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">2.3.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
