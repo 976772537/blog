@@ -96,18 +96,21 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="maven 使用 Maven规定的目录结构maven项目需要遵循一下结构：   Maven基本命令1.-v:  查询Maven版本  Maven安装完成之后，在命令行输入mvn -v，若出现maven信息，则说明安装成功。  2.compile：编译 3.test:  测试项目 4.package:  打包 5.clean:  删除target文件夹 6.install:  安装 Maven仓库">
 <meta name="keywords" content="drp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/blog/2019/04/11/hello-world/index.html">
+<meta property="og:title" content="maven 使用总结">
+<meta property="og:url" content="http://yoursite.com/blog/2019/04/12/maven-使用总结/index.html">
 <meta property="og:site_name" content="Drp的学习笔记">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="maven 使用 Maven规定的目录结构maven项目需要遵循一下结构：   Maven基本命令1.-v:  查询Maven版本  Maven安装完成之后，在命令行输入mvn -v，若出现maven信息，则说明安装成功。  2.compile：编译 3.test:  测试项目 4.package:  打包 5.clean:  删除target文件夹 6.install:  安装 Maven仓库">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-11T14:02:55.273Z">
+<meta property="og:image" content="http://yoursite.com/blog/2019/04/12/maven-使用总结/img/maven结构图.PNG">
+<meta property="og:image" content="http://yoursite.com/blog/2019/04/12/maven-使用总结/img/mirrors.PNG">
+<meta property="og:updated_time" content="2019-04-12T07:05:50.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="maven 使用总结">
+<meta name="twitter:description" content="maven 使用 Maven规定的目录结构maven项目需要遵循一下结构：   Maven基本命令1.-v:  查询Maven版本  Maven安装完成之后，在命令行输入mvn -v，若出现maven信息，则说明安装成功。  2.compile：编译 3.test:  测试项目 4.package:  打包 5.clean:  删除target文件夹 6.install:  安装 Maven仓库">
+<meta name="twitter:image" content="http://yoursite.com/blog/2019/04/12/maven-使用总结/img/maven结构图.PNG">
 
 
 
@@ -115,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/blog/2019/04/11/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/blog/2019/04/12/maven-使用总结/">
 
 
 
@@ -125,7 +128,7 @@
   };
 </script>
 
-  <title>Hello World | Drp的学习笔记</title>
+  <title>maven 使用总结 | Drp的学习笔记</title>
   
 
 
@@ -326,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2019/04/11/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2019/04/12/maven-使用总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="空傲">
@@ -343,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">maven 使用总结
 
               
             
@@ -369,9 +372,13 @@
                 
               
 
-              <time title="Created: 2019-04-11 14:02:55" itemprop="dateCreated datePublished" datetime="2019-04-11T14:02:55Z">2019-04-11</time>
+              <time title="Created: 2019-04-12 13:17:07 / Modified: 07:05:50" itemprop="dateCreated datePublished" datetime="2019-04-12T13:17:07Z">2019-04-12</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -411,15 +418,35 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="maven-使用"><a href="#maven-使用" class="headerlink" title="maven 使用"></a>maven 使用</h2><hr>
+<h4 id="Maven规定的目录结构"><a href="#Maven规定的目录结构" class="headerlink" title="Maven规定的目录结构"></a>Maven规定的目录结构</h4><p>maven项目需要遵循一下结构：</p>
+<p> <img src="img/maven结构图.PNG" alt="maven结构图" title="maven结构图"></p>
+<h4 id="Maven基本命令"><a href="#Maven基本命令" class="headerlink" title="Maven基本命令"></a>Maven基本命令</h4><p>1.<strong>-v</strong>:  查询Maven版本</p>
+<blockquote>
+<p>Maven安装完成之后，在命令行输入mvn -v，若出现maven信息，则说明安装成功。</p>
+</blockquote>
+<p>2.<strong>compile</strong>：编译</p>
+<p>3.<strong>test</strong>:  测试项目</p>
+<p>4.<strong>package</strong>:  打包</p>
+<p>5.<strong>clean</strong>:  删除target文件夹</p>
+<p>6.<strong>install</strong>:  安装</p>
+<h4 id="Maven仓库"><a href="#Maven仓库" class="headerlink" title="Maven仓库"></a>Maven仓库</h4><ul>
+<li>本地仓库：maven在本机存储的仓库</li>
+<li>中央仓库：maven官方提供的远程仓库</li>
+</ul>
+<p>当项目编译时，Maven首先从本地仓库中寻找项目所需的Jar包，若本地仓库没有，再到Maven的中央仓库下载所需Jar包。</p>
+<p>因为在国内使用maven官方远程仓库下载需要vpn或下载缓慢，推荐配置镜像仓库</p>
+<p><img src="img/mirrors.PNG" alt="mirrors" title="mirrors镜像配置"></p>
+<h4 id="Maven坐标"><a href="#Maven坐标" class="headerlink" title="Maven坐标"></a>Maven坐标</h4><p>在Maven中，坐标是Jar包的唯一标识，Maven通过坐标在仓库中找到项目所需的Jar包。</p>
+<p>如下代码中，groupId和artifactId构成了一个Jar包的坐标。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;cn.missbe.web.search&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;resource-search&lt;/artifactId&gt;</span><br><span class="line">    &lt;packaging&gt;jar&lt;/packaging&gt;</span><br><span class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>groupId:所需Jar包的项目名</p>
+</li>
+<li><p>artifactId:所需Jar包的模块名</p>
+</li>
+<li><p>version:所需Jar包的版本号</p>
+</li>
+</ul>
 
       
     </div>
@@ -446,22 +473,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2019/04/12/My-New-Post/" rel="prev" title="My New Post">
-                My New Post <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -529,7 +540,7 @@
                 
                   <a href="/blog/archives">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -608,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#maven-使用"><span class="nav-number">1.</span> <span class="nav-text">maven 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Maven规定的目录结构"><span class="nav-number">1.0.1.</span> <span class="nav-text">Maven规定的目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maven基本命令"><span class="nav-number">1.0.2.</span> <span class="nav-text">Maven基本命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maven仓库"><span class="nav-number">1.0.3.</span> <span class="nav-text">Maven仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maven坐标"><span class="nav-number">1.0.4.</span> <span class="nav-text">Maven坐标</span></a></li></ol></li></ol></div>
             
 
           </div>
