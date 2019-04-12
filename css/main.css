@@ -1922,7 +1922,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9e34db;
+  background: #afffb8;
 }
 .feed-link,
 .chat {
@@ -2865,4 +2865,15 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+#sidebar {
+  background: url("/blog/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#sidebar p,
+#sidebar span,
+#sidebar a {
+  color: #e1e1e1;
 }
