@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Drp的学习笔记">
 <meta property="og:description" content="Spring常用注解">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-14T15:14:35.911Z">
+<meta property="og:updated_time" content="2019-04-15T02:00:57.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring常用注解">
 <meta name="twitter:description" content="Spring常用注解">
@@ -369,12 +369,24 @@
                 
               
 
-              <time title="Created: 2019-04-14 10:25:56 / Modified: 15:14:35" itemprop="dateCreated datePublished" datetime="2019-04-14T10:25:56Z">2019-04-14</time>
+              <time title="Created: 2019-04-14 10:25:56" itemprop="dateCreated datePublished" datetime="2019-04-14T10:25:56Z">2019-04-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-15 02:00:57" itemprop="dateModified" datetime="2019-04-15T02:00:57Z">2019-04-15</time>
               
             
           </span>
@@ -446,27 +458,99 @@
 <blockquote>
 <p><a href="https://blog.csdn.net/cbjcry/article/details/84476404" target="_blank" rel="noopener">全局Session-GlobalSession</a></p>
 </blockquote>
-<h4 id="6-Value注解"><a href="#6-Value注解" class="headerlink" title="6.@Value注解"></a>6.@Value注解</h4><p><strong>@Value</strong>为属性注入值（属性上）支持如下注入：</p>
+<h4 id="6-Value注解"><a href="#6-Value注解" class="headerlink" title="6.@Value注解"></a>6.@Value注解</h4><p><strong>@Value</strong> 为属性注入值（属性上）支持如下注入：</p>
 <ul>
-<li><p>普通字符注入  @Value(“aaaa”)String name;</p>
-</li>
-<li><p>操作系统属性注入  @Value(“#{systemProperties[‘os.name’]}”)String osName;</p>
-</li>
-<li><p>表达式结果注入  @Value(“#{ T(java.lang.Math).random() * 100 }”) String randomNumber;</p>
-</li>
-<li><p>bean属性注入  @Value(“#{domeClass.name}”)String name;</p>
-</li>
-<li><p>文件资源注入 @Value(“classpath:com/hgs/hello/test.txt”)String Resource file;</p>
-</li>
-<li><p>网站资源注入 @Value(“<a href="http://www.cznovel.com&quot;)Resource" target="_blank" rel="noopener">http://www.cznovel.com&quot;)Resource</a> url;</p>
-</li>
-<li><p>配置文件注入 Value(“${book.name}”)String bookName;</p>
-</li>
+<li>普通字符注入  </li>
 </ul>
-<p>注入配置使用方法：</p>
-<p>① 编写配置文件（test.properties） book.name=《三体》</p>
-<p>② <strong>@PropertySource</strong> 加载配置文件(类上) @PropertySource(“classpath:com/hgs/hello/test/test.propertie”)</p>
-<p>③ 还需配置一个PropertySourcesPlaceholderConfigurer的bean。</p>
+<p>@Value(“aaaa”)String name;</p>
+<ul>
+<li>操作系统属性注入</li>
+</ul>
+<p>@Value(“#{systemProperties[‘os.name’]}”)String osName;</p>
+<ul>
+<li>表达式结果注入  </li>
+</ul>
+<p>@Value(“#{ T(java.lang.Math).random() * 100 }”) String randomNumber;</p>
+<ul>
+<li>bean属性注入  </li>
+</ul>
+<p>@Value(“#{domeClass.name}”)String name;</p>
+<ul>
+<li>文件资源注入</li>
+</ul>
+<p>@Value(“classpath:com/hgs/hello/test.txt”)String Resource file;</p>
+<ul>
+<li>网站资源注入</li>
+</ul>
+<p>@Value(“<a href="http://www.cznovel.com&quot;)Resource" target="_blank" rel="noopener">http://www.cznovel.com&quot;)Resource</a> url;</p>
+<ul>
+<li>配置文件注入</li>
+</ul>
+<p>@Value(“${book.name}”)String bookName;</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/ryelqy/article/details/77453713" target="_blank" rel="noopener">@Value详解</a></p>
+</blockquote>
+<h4 id="7-环境切换"><a href="#7-环境切换" class="headerlink" title="7.环境切换"></a>7.环境切换</h4><p><strong>@Profile</strong>  通过设定Environment的ActiveProfiles来设定当前context需要使用的配置环境。（类或方法上）</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/wild46cat/article/details/71189858" target="_blank" rel="noopener">@profile注解的使用</a></p>
+</blockquote>
+<p><strong>@Conditional</strong>  可以通过次注解定义条件化的bean，通过实现Condition接口，并重写matches方法，从而决定bean是否被实例化。</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/xcy1193068639/article/details/81491071" target="_blank" rel="noopener">@Conditional注解 详细讲解及示例</a></p>
+</blockquote>
+<h4 id="8-异步相关"><a href="#8-异步相关" class="headerlink" title="8.异步相关"></a>8.异步相关</h4><p>@EnableAsync 配置类中，通过次注解开启对异步任务的支持，叙事性AsyncConfigurer接口（类上）</p>
+<p>@Async 在实际执行的bean方法使用该注解来声明其是一个异步任务（需要@EnableAsync注解)</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/azhqiang/p/5609615.html" target="_blank" rel="noopener">@EnableAsync 异步调用</a></p>
+</blockquote>
+<h4 id="9-事务相关"><a href="#9-事务相关" class="headerlink" title="9.事务相关"></a>9.事务相关</h4><p><strong>@EnableTransactionManagement</strong> 开启事务支持</p>
+<p><strong>@Transactional</strong> 方法将支持事务</p>
+<blockquote>
+<p><a href="https://docs.spring.io/spring/docs/3.1.x/javadoc-api/org/springframework/transaction/annotation/EnableTransactionManagement.html" target="_blank" rel="noopener">@EnableTransactionManagement Api</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://blog.csdn.net/timchen525/article/details/81517748" target="_blank" rel="noopener">@Transactional 详解</a></p>
+</blockquote>
+<h4 id="10-定时任务相关"><a href="#10-定时任务相关" class="headerlink" title="10.定时任务相关"></a>10.定时任务相关</h4><p>@EnableScheduling 在配置类上使用，开启计划任务的支持（类上）</p>
+<p>@Scheduled 来申明这是一个任务，包括cron，fixDelay，fixRate等类型（方法上需要先开启计划任务的支持）</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/u014252478/article/details/85231069" target="_blank" rel="noopener">@EnableScheduling 详解</a></p>
+</blockquote>
+<h4 id="11-Enable-注解说明"><a href="#11-Enable-注解说明" class="headerlink" title="11.@Enable*注解说明"></a>11.@Enable*注解说明</h4><p><strong>@EnableAspectJAutoProxy</strong> 开启对AspectJ自动代理的支持</p>
+<p><strong>@EnableAsync</strong> 开启异步的方式支持</p>
+<p><strong>@EnableScheduling</strong> 开启计划任务的支持</p>
+<p><strong>@EnableWebMvc</strong> 开启Web MVC的配置支持</p>
+<p><strong>@EnableConfigurationProperties</strong> 开启对@ConfigurationProperties注解配置Bean的支持</p>
+<p><strong>@EnableJpsRepositories</strong> 开启对SpringDataJPARepository的支持</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/qingwen/p/5578862.html" target="_blank" rel="noopener">JPA详解</a></p>
+</blockquote>
+<p><strong>@EnableTransactionManagement</strong> 开启注解式事务的支持</p>
+<p><strong>@EnableCaching</strong> 开启缓存支持</p>
+<h3 id="12-测试相关"><a href="#12-测试相关" class="headerlink" title="12.测试相关"></a>12.测试相关</h3><p><strong>@RunWith</strong><br>用于对Junit的支持@RunWith(SpringJUnit4ClassRunner.class)</p>
+<p><strong>ContextConfiguration</strong> 用来加载配置ApplicationContext，其中classes属性用来加载配置类</p>
+<p>@ContextConfiguration(classes={TestConfig.class})</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/bihanghang/p/10023759.html" target="_blank" rel="noopener">@ContextConfiguration的意思</a></p>
+</blockquote>
+<hr>
+<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><p><strong>@EnableWebMvc</strong> 在配置类中开启Web MVC的配置支持</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/zxc123e/article/details/84636521" target="_blank" rel="noopener">@EnableWebMvc使用坑点解析</a></p>
+</blockquote>
+<p><strong>@Controller</strong> 声明该类为SpringMVC中的Controller</p>
+<p><strong>@RequestMapping</strong> 用于映射Web请求，包括访问路径和参数</p>
+<p><strong>@ResponseBody</strong> 支持将返回值放在response内，而不是一个页面，通常用户返回json数据</p>
+<p><strong>@RequestBody</strong> 支持将参数放入request体中，而不是直接连接在地址后面。</p>
+<p><strong>@PathVariable</strong> 用于接收路径参数，比如：@RequestMapping(“/hello/{name}”)声明的路径，将注解放在参数前，即可获得该值，通常作为Restful的接口实现方式。</p>
+<p><strong>@RestController</strong> 该注解为一个组合注解，相当于@Controller和@ResponseBody的组合，相当于该@Controller的所有方法都默认加上了@ResponseBody。</p>
+<p><strong>@ControllerAdvice</strong> 通过该注解，我们可以将对于控制器的全局配置放置在同一个位置，注解了@Controller的类的方法可使用@ExceptionHandler、@InitBinder、@ModelAttribute注解到方法上， 这对所有注解了 @RequestMapping的控制器内的方法有效。</p>
+<p><strong>@ExceptionHandler</strong> 用于全局处理控制器里的异常</p>
+<p><strong>@InitBinder</strong> 用来设置WebDataBinder，WebDataBinder用来自动绑定前台请求参数到Model中。</p>
+<p><strong>@ModelAttribute</strong> 本来的作用是绑定键值对到Model里，在@ControllerAdvice中是让全局的@RequestMapping都能获得在此处设置的键值对。</p>
+<blockquote>
+<p><a href="https://my.oschina.net/zhangxufeng/blog/2222434" target="_blank" rel="noopener">@ControllerAdvice详解</a></p>
+</blockquote>
 
       
     </div>
@@ -655,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring常用注解"><span class="nav-number">1.</span> <span class="nav-text">Spring常用注解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-声明bean注解"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.声明bean注解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-注入bean注解"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2.注入bean注解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-java配置相关"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3.java配置相关</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-切面（aop）相关"><span class="nav-number">1.0.1.</span> <span class="nav-text">4.切面（aop）相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Bean的属性支持"><span class="nav-number">1.0.2.</span> <span class="nav-text">5.@Bean的属性支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Value注解"><span class="nav-number">1.0.3.</span> <span class="nav-text">6.@Value注解</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring常用注解"><span class="nav-number">1.</span> <span class="nav-text">Spring常用注解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-声明bean注解"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.声明bean注解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-注入bean注解"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2.注入bean注解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-java配置相关"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3.java配置相关</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-切面（aop）相关"><span class="nav-number">1.0.1.</span> <span class="nav-text">4.切面（aop）相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Bean的属性支持"><span class="nav-number">1.0.2.</span> <span class="nav-text">5.@Bean的属性支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Value注解"><span class="nav-number">1.0.3.</span> <span class="nav-text">6.@Value注解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-环境切换"><span class="nav-number">1.0.4.</span> <span class="nav-text">7.环境切换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-异步相关"><span class="nav-number">1.0.5.</span> <span class="nav-text">8.异步相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-事务相关"><span class="nav-number">1.0.6.</span> <span class="nav-text">9.事务相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-定时任务相关"><span class="nav-number">1.0.7.</span> <span class="nav-text">10.定时任务相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-Enable-注解说明"><span class="nav-number">1.0.8.</span> <span class="nav-text">11.@Enable*注解说明</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#12-测试相关"><span class="nav-number">1.1.</span> <span class="nav-text">12.测试相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SpringMVC"><span class="nav-number">1.1.1.</span> <span class="nav-text">SpringMVC</span></a></li></ol></li></div>
             
 
           </div>
